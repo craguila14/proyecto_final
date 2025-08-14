@@ -2,6 +2,7 @@ import React, {useContext} from "react"
 import { ProductsContext } from "../contexts/FavsContext"
 import productoImg from "../assets/imagenNoDisponible.png";
 import { CartContext } from '../contexts/CartContext';
+import { ENDPOINT, URLBASE } from "../config/constants";
 
 const ProductosFavoritos = () => {
 
@@ -23,7 +24,7 @@ const ProductosFavoritos = () => {
             <div className="card" style={{ width: '18rem' }}>
             <img
               className="card-img-top"
-              src={producto.imagen}
+              src={`${URLBASE}${producto.imagen}`}
               alt={producto.nombre}
             />
             <div className="card-body">

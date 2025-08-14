@@ -3,7 +3,9 @@
 ## Descripción
 Peluditos E-commerce es una aplicación web fullstack para una tienda en línea de productos para mascotas. Permite a los usuarios ver productos, agregarlos al carrito, gestionar sus propios productos y realizar compras.
 
-![alt text](peluditos.png)
+La URL del sitio en produccion es : https://peluditos.shortenqr.com/
+
+![alt text](<Screenshot 2024-09-15 at 19.00.11.png>)
 
 ## Características principales
 - Catálogo de productos para perros y gatos

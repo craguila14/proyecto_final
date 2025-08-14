@@ -5,6 +5,7 @@ import axios from 'axios';
 import '../styles/misProductos.css';
 import { ENDPOINT, URLBASE } from "../config/constants";
 import Cookies from 'js-cookie';
+import { useNavigate } from "react-router-dom";
 
 const MisProductos = () => {
   const { currentUser } = useAuth();
@@ -22,6 +23,7 @@ const MisProductos = () => {
   });
   const [imagenPreview, setImagenPreview] = useState("");
   const [misProductos, setMisProductos] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -128,6 +130,7 @@ const MisProductos = () => {
         user_id: currentUser?.id,
       });
       setImagenPreview("");
+      navigate(0); // Esto recargará la página actual
     } catch (error) {
       console.error("Error al agregar o actualizar el producto:", error.response?.data || error.message);
     }
