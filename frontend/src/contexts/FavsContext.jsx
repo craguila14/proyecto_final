@@ -96,7 +96,7 @@ const ShopProvider = ({ children }) => {
         handleLike,
         currentPage,
         setCurrentPage, 
-        totalPages 
+        totalPages,
       }}>
         {children}
       </ProductsContext.Provider>

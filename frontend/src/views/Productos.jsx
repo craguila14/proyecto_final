@@ -13,6 +13,7 @@ const Productos = () => {
     const [showErrorAlert, setShowErrorAlert] = useState(false);
     const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
+
     useEffect(() => {
         fetchProductos(currentPage);
     }, [currentPage]);

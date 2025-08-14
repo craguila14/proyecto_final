@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { ENDPOINT } from '../config/constants';
 import '../styles/registrarse_iniciar_sesion.css';
 import { useAuth } from "../contexts/AuthContext";
 
