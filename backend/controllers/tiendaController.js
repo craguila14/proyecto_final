@@ -2,8 +2,6 @@ import bcrypt from 'bcryptjs';
 import { model } from '../models/tiendaModel.js';
 import jwt from "jsonwebtoken";
 import "dotenv/config";
-import { URLBASE } from '../config/constants';
-
 
 const home = (req, res) => {
     res.send('Home');
@@ -146,23 +144,13 @@ const getProducts = async (req, res) => {
     try {
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 9;
-
         const productos = await model.listarProduct({ page, limit });
-
-        const productosConImagen = productos.map(p => ({
-            ...p,
-            imagen: p.imagen && !p.imagen.startsWith('http')
-                ? `${URLBASE}${p.imagen}`
-                : p.imagen
-        }));
-
-        res.json(productosConImagen);
+        res.json(productos);
     } catch (error) {
         console.error('Error al obtener productos:', error.message);
         res.status(500).json({ error: 'Error al obtener productos' });
     }
 };
-
 
 const getDetallesProductById = async (req, res) => {
     const producto_id = req.params.producto_id;
