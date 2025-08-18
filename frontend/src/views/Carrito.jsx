@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from '../contexts/CartContext';
 import { ProductsContext } from '../contexts/FavsContext';
 import { Link } from 'react-router-dom';
+import { URLBASE } from '../config/constants';
 
 const Carrito = () => {
   const { cart, removeFromCart, updateQuantity } = useContext(CartContext);
@@ -44,7 +45,9 @@ const Carrito = () => {
               return (
                 <div key={item.id} className="col-md-4 mb-4">
                   <div className="card" style={{ width: '18rem' }}>
-                    <img src={item.imagen} className="card-img-top" alt={item.nombre} />
+                    <img src={ item.imagen.startsWith("http") 
+                                  ? item.imagen 
+                                  : `${URLBASE}${item.imagen}`} className="card-img-top" alt={item.nombre} />
                     <div className="card-body">
                       <h5 className="card-title">{item.nombre}</h5>
                       <p className="card-text">Precio: ${formatPrice(item.precio)}</p>

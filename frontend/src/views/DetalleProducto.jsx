@@ -69,7 +69,9 @@ const DetalleProducto = () => {
       <div className="row">
         <div className="col-md-6 d-flex flex-column align-items-center">
           <img
-            src={`${URLBASE}${producto.imagen}`}
+            src={ producto.imagen.startsWith("http") 
+                    ? producto.imagen 
+                    : `${URLBASE}${producto.imagen}`}
             alt={producto.nombre}
             className="img-fluid mb-4"
             style={{ maxHeight: "400px" }}
