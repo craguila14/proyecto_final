@@ -24,7 +24,9 @@ const ProductosFavoritos = () => {
             <div className="card" style={{ width: '18rem' }}>
             <img
               className="card-img-top"
-              src={`${URLBASE}${producto.imagen}`}
+              src={ producto.imagen.startsWith("http") 
+                    ? producto.imagen 
+                    : `${URLBASE}${producto.imagen}`}
               alt={producto.nombre}
             />
             <div className="card-body">
