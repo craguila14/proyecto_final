@@ -72,8 +72,15 @@ const Productos = () => {
                     filteredProducts.map((producto) => (
                         <div key={producto.id} className="col-md-4 mb-4">
                             <div className="card" style={{ width: '18rem' }}>
-                                <img src={`${URLBASE}${producto.imagen}`} alt={producto.nombre} className="card-img-top" />
-                                <div className="card-body">
+                        <img 
+                            src={
+                                producto.imagen.startsWith("http") 
+                                    ? producto.imagen 
+                                    : `${URLBASE}${producto.imagen}`
+                            } 
+                            alt={producto.nombre} 
+                            className="card-img-top" 
+                        />                                <div className="card-body">
                                     <h5 className="card-title">{producto.nombre}</h5>
                                     <p>${formatPrice(producto.precio)}</p>
                                     <button 
