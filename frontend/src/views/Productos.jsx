@@ -80,7 +80,8 @@ const Productos = () => {
                             } 
                             alt={producto.nombre} 
                             className="card-img-top" 
-                        />                                <div className="card-body">
+                        />                                
+                        <div className="card-body">
                                     <h5 className="card-title">{producto.nombre}</h5>
                                     <p>${formatPrice(producto.precio)}</p>
                                     <button 
