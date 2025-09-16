@@ -3,7 +3,7 @@
 ## Descripción
 Peluditos E-commerce es una aplicación web fullstack para una tienda en línea de productos para mascotas. Permite a los usuarios ver productos, agregarlos al carrito, gestionar sus propios productos y realizar compras.
 
-##🔗 [Ver aplicación desplegada](https://peluditos-frontend.onrender.com/)
+🔗 [Ver aplicación desplegada](https://peluditos-frontend.onrender.com/)
 
 ![alt text](<Screenshot 2024-09-15 at 19.00.11.png>)
 
